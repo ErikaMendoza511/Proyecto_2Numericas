@@ -1,0 +1,183 @@
+/* Ajusta el body para que cubra toda la altura */
+body {
+    background-image: url(./imagenes/fondo9.jpg);
+    font-family: "Sour Gummy", sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Ajustado para cubrir toda la página */
+    margin: 0;
+}
+
+/* Asegura que las tarjetas no se desorganicen y se alineen en filas */
+.row.text-center {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a diferentes tamaños de pantalla */
+    justify-content: space-between; /* Espacio entre las tarjetas */
+}
+
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Efecto de hover para agrandar las tarjetas */
+}
+
+.navbar img {
+    width: 120px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+.nav-link {
+    font-style: italic;
+}
+
+.navbar {
+    background-color: #cab08f;
+    height: auto;
+}
+
+/* Elimina márgenes entre columnas */
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Ajusta el video y el carrusel para que ocupen el 100% de su columna */
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+.container-fluid{
+    margin-top: 2%;
+    
+}
+
+/* Media Query para dispositivos pequeños */
+@media (max-width: 768px) {
+    .video-container, .carousel-container {
+        margin-bottom: 20px;
+    }
+}
+.service-card {
+    position: relative;
+    background-color: transparent;  /* Fondo transparente */
+    padding: 20px;                   /* Espaciado interno */
+    border-radius: 10px;             /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Efecto al pasar el ratón */
+    margin-bottom: 30px;             /* Separación entre las tarjetas */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+    display: flex;
+    flex-direction: column;
+    height: 300px;                  /* Altura fija para mantener el tamaño */
+    overflow: hidden;               /* Para ocultar el contenido que se desborda inicialmente */
+    
+}
+
+.service-card .card-content {
+    flex-grow: 1;                   /* Hace que el contenido ocupe el espacio disponible */
+    transition: max-height 0.3s ease; /* Animación de expansión */
+    overflow: hidden;               /* Oculta el texto extra */
+    max-height: 100px;              /* Limita la altura inicial del contenido */
+}
+
+.service-card:hover {
+    height: auto; /* Permite que la tarjeta se expanda al mostrar el texto completo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave al pasar el mouse */
+}
+
+.service-card:hover .card-content {
+    max-height: 300px;             /* Expande la tarjeta para mostrar el texto completo */
+    overflow: auto;                /* Muestra el contenido si se desborda */
+}
+
+.service-img {
+    width: 100%;
+    height: 150px;                 /* Altura fija para las imágenes */
+    object-fit: cover;             /* Asegura que la imagen cubra el espacio sin distorsión */
+    border-radius: 5px;            /* Redondeo de la imagen */
+}
+
+h4 {
+    font-size: 1.25rem;  /* Tamaño del título */
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;      /* Tamaño del texto */
+    color: #555;          /* Color del texto */
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px; /* Menos espacio en pantallas pequeñas */
+    }
+}
+    .container-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo translúcido */
+        border-radius: 10px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto elevado */
+        backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+    }
+    .container-form{
+        background-color: transparent   ;
+    }
+
+    /* Estilo para los campos del formulario */
+    .form-control {
+        background-color: transparent; /* Fondo transparente */
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        transition: background-color 0.3s ease; /* Efecto suave al enfocar el campo */
+    }
+
+    .form-control:focus {
+        background-color: rgba(255, 255, 255, 0.8); /* Color más oscuro al enfocar */
+        box-shadow: 0 0 5px rgba(225, 217, 206, 1);
+    }
+
+    /* Estilo para el botón */
+    .btn-primary {
+        background-color:#886750;
+        border-color: #e1d9ce;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #e1d9ce;
+        border-color:#cab08f;
+    }
+
+    /* Estilo para el título */
+    h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 30px;
+    }
+/* Estilo para el footer */
+footer {
+    background-color: #cab08f;
+    padding: 20px 0;
+    margin-top: 5%;
+}
+
+/* Íconos sociales en el footer */
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
